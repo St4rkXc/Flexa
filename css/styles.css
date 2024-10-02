@@ -1,0 +1,379 @@
+:root {
+  --primary: #eb3f35;
+  --primary-dark: #1c3ab6;
+  --primary-light: #e2f1ff;
+  --accent: #00d4d7;
+  --accent-dark: #00bac1;
+  --accent-light: #dff9f8;
+  --success: #13d527;
+  --success-dark: #00ae11;
+  --success-light: #eafbe7;
+  --secondary: #8f15d5;
+  --secondary-dark: #6013c7;
+  --secondary-light: #f4e5fa;
+  --info: #15b2d5;
+  --info-dark: #0f8ca8;
+  --info-light: #e0f5fa;
+  --caution: #dbbb25;
+  --caution-dark: #d58f15;
+  --caution-light: #fbf9e4;
+  --error: #e6185e;
+  --error-dark: #bf1257;
+  --error-light: #fce4eb;
+  --black: #1d1d1d;
+  --dark-1: #2d2d2d;
+  --dark-2: #4d4d4d;
+  --dark-3: #6d6d6d;
+  --gray-1: #8d8d8d;
+  --gray-2: #adadad;
+  --gray-3: #cdcdcd;
+  --gray-4: #e0e0e0;
+  --light-1: #efefef;
+  --light-2: #f5f5f5;
+  --light-3: #fafafa;
+  --white: #ffffff;
+  --gradient-1: linear-gradient(180deg, #155bd5 0%, #1c3ab6 100%);
+  --gradient-2: linear-gradient(180deg, #155bd5 13.02%, #00d4d7 85.42%);
+  --gradient-3: linear-gradient(180deg, #155bd5 0%, #8f15d5 100%);
+  --gradient-4: linear-gradient(180deg, #155bd5 0%, #13d527 100%);
+  --gradient-5: linear-gradient(180deg, #155bd5 0%, #15bbd5 100%);
+  --gradient-6: linear-gradient(180deg, #155bd5 0%, #dbbb25 100%);
+  --gradient-7: linear-gradient(180deg, #155bd5 0%, #e6185e 100%);
+  --gradient-8: linear-gradient(180deg, #1c3ab6 0%, #00bac1 100%);
+  --gradient-9: linear-gradient(180deg, #00d4d7 13.02%, #155bd5 85.42%);
+  --shadow-1: 0px 0px 1px rgba(40, 41, 61, 0.08),
+    0px 0.5px 2px rgba(96, 97, 112, 0.16);
+  --shadow-2: 0px 0px 1px rgba(40, 41, 61, 0.04),
+    0px 2px 4px rgba(96, 97, 112, 0.16);
+  --shadow-3: 0px 0px 2px rgba(40, 41, 61, 0.04),
+    0px 4px 8px rgba(96, 97, 112, 0.16);
+  --shadow-4: 0px 2px 4px rgba(40, 41, 61, 0.04),
+    0px 8px 16px rgba(96, 97, 112, 0.16);
+  --shadow-5: 0px 2px 8px rgba(40, 41, 61, 0.04),
+    0px 16px 24px rgba(96, 97, 112, 0.16);
+  --shadow-6: 0px 2px 8px rgba(40, 41, 61, 0.08),
+    0px 20px 32px rgba(96, 97, 112, 0.24);
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "poppins";
+}
+
+header {
+  width: 100vw;
+  height: 90vh;
+}
+
+.buttoncstm {
+  padding: 5px 40px;
+  border: 0;
+  border-radius: 6px;
+  background-color: var(--primary);
+  color: #ffffff;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.buttoncstm:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px rgba(111, 197, 255, 0.3137254902);
+  transform: scale(1.1);
+}
+
+.buttoncstm:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+.hero {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/cambridge-college.jpg) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.subheadline {
+  color: #8c8c91 !important;
+}
+
+.course-card {
+  background-color: #fff3f3;
+  padding: 24px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  height: 250px;
+  overflow: clip;
+  overflow-clip-margin: content-box;
+  text-overflow: ellipsis;
+}
+
+.campus .img-container {
+  height: 600px;
+}
+
+.campus .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.campus .img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.campus .img-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background: #eb3f35;
+  bottom: 0;
+  left: 0;
+  border-radius: 6px;
+  opacity: 0.5;
+  transition: all ease 500ms;
+  backdrop-filter: blur(12px);
+}
+
+.hover-text {
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  height: auto;
+  overflow: hidden;
+  transition: 500ms ease;
+}
+
+.campus .img-container:hover::after {
+  height: 100%;
+}
+
+.campus .img-container:hover .hover-text {
+  bottom: 40%;
+}
+
+.facilities .img-container {
+  height: 450px;
+}
+
+.facilities .img-container img {
+  height: 100%;
+  border-radius: 6px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.title {
+  position: relative;
+  margin-bottom: 18px;
+  padding-bottom: 15px;
+}
+
+.title::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 3px;
+  width: 50px;
+  background-color: var(--primary);
+}
+
+.titlebadge {
+  text-transform: uppercase;
+  color: var(--primary);
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cta-content {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/collage\ 4.png) center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 6px;
+  height: 400px;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+@media (max-width: 1200px) {
+  .campus .col-xl-4 {
+    margin-top: 1rem !important;
+  }
+  .campus .row {
+    margin-top: 2rem !important;
+  }
+  .facilities .col-xl-4 {
+    margin-top: 2rem !important;
+  }
+  .facilities .row {
+    margin-top: 2rem !important;
+  }
+}
+@media (max-width: 990px) {
+  .course-card {
+    margin-top: 1.2rem;
+  }
+}
+@media (max-width: 720px) {
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+  }
+}
+.testimonial-one .section-title-seven {
+  text-align: center;
+  max-width: 550px;
+  margin: auto;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 5;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .testimonial-one .section-title-seven {
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial-one .section-title-seven {
+    margin-bottom: 35px;
+  }
+}
+.testimonial-one .section-title-seven h5 {
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .testimonial-one .section-title-seven h5 {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .testimonial-one .section-title-seven h2 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .testimonial-one .section-title-seven h2 {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+  }
+}
+.testimonial-one .section-title-seven p {
+  color: var(--dark-3);
+}
+
+.testimonial-one .testimonial-one-active {
+  margin: 0;
+}
+
+.testimonial-one .testimonial-one-wrapper {
+  position: relative;
+}
+
+.testimonial-one .testimonial-one-wrapper .tns-nav {
+  position: absolute;
+  z-index: 2;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-one .testimonial-one-wrapper .tns-nav button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  opacity: 0.3;
+  border: 0;
+  margin: 0 3px;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+
+.testimonial-one .testimonial-one-wrapper .tns-nav button.tns-nav-active {
+  opacity: 1;
+}
+
+.testimonial-one .single-testimonial {
+  margin-top: 30px;
+  padding: 30px;
+  background-color: var(--white);
+  border: 1px solid var(--gray-4);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-one .single-testimonial .testimonial-image {
+  position: relative;
+  display: inline-block;
+}
+
+.testimonial-one .single-testimonial .testimonial-image img {
+  width: 120px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.testimonial-one .single-testimonial .testimonial-image .quote-icon {
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 18px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.testimonial-one .single-testimonial .testimonial-content {
+  padding-top: 30px;
+}
+
+.testimonial-one .single-testimonial .testimonial-content .text {
+  color: var(--dark-3);
+}
+
+.testimonial-one .single-testimonial .testimonial-content .author-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black);
+  margin-top: 24px;
+}
+
+.testimonial-one .single-testimonial .testimonial-content .sub-title {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--dark-3);
+}
